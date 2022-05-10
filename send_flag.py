@@ -15,6 +15,7 @@ def send(flag, challenge_number):
 
     # Creates the response to send
     send = fabio_usarname + " " + challenge_number + " " + flag.decode('utf-8')
+    print("Sending " + fabio_usarname + " flag")
     print(send)
 
     # Send our flag and recive the response

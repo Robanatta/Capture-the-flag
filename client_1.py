@@ -9,7 +9,7 @@ serverSocket.connect(("162.243.73.199", 9990))
 
 # Recive response and close socket connection
 flag = serverSocket.recv(1024)
-print("Response flag = " + flag.decode("utf-8"))
+print(flag.decode("utf-8"))
 serverSocket.close()
 
 # Send the flag

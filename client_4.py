@@ -7,9 +7,9 @@ import send_flag
 serverSocket = socket(AF_INET, SOCK_STREAM)
 serverSocket.connect(("162.243.73.199", 9993))
 
-# Recive first response from the socket
+# Recive first response from the server
 res = serverSocket.recv(1024)
-print("First response = " + res.decode("utf-8"))
+print(res.decode("utf-8").strip())
 
 # Split the response and saves it in 3 float numbers
 rtt, alpha_value, last_rtt = res.split()
@@ -20,12 +20,12 @@ last_rtt = float(last_rtt.split('ms')[0])
 # Calculate the estimated RTT, rounds it to a int then convert it back to a string
 ertt = alpha_value * last_rtt + (1 - alpha_value) * rtt
 ertt = str(int(round(ertt)))
-print("Estimated RTT = " + ertt + "\n")
+print(ertt)
 
 # Send the estimated RTT to socket and receive the flag, then close the connection
 serverSocket.send(ertt.encode("utf-8"))
 flag = serverSocket.recv(1024)
-print("Response flag = " + flag.decode("utf-8"))
+print(flag.decode("utf-8"))
 serverSocket.close()
 
 # Send the flag
