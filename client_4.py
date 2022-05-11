@@ -22,7 +22,7 @@ ertt = alpha_value * last_rtt + (1 - alpha_value) * rtt
 ertt = str(int(round(ertt)))
 print(ertt)
 
-# Send the estimated RTT to socket and receive the flag, then close the connection
+# Send the estimated RTT to server and receive the flag, then close the connection
 serverSocket.send(ertt.encode("utf-8"))
 flag = serverSocket.recv(1024)
 print(flag.decode("utf-8"))

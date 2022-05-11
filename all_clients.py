@@ -17,6 +17,6 @@ print ("Client 8")
 print ("Client 9")
 # import client_9
 print ("Client 10")
-# import client_10
+import client_10
 
 print("All clients done")
