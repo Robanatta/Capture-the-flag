@@ -25,7 +25,27 @@ def send(flag, challenge_number):
     
     # Roberto flag response
 
+    # Creates the response to send
+    # send = roberto_username + " " + challenge_number + " " + flag.decode('utf-8')
+    # print("Sending " + roberto_username + " flag")
+    # print(send)
+
+    # # Send our flag and recive the response
+    # flagSocket.send(send)
+    # fres = flagSocket.recv(1024)
+    # print(fres)
+
     # Castro flag response
+
+    # Creates the response to send
+    # send = castro_username + " " + challenge_number + " " + flag.decode('utf-8')
+    # print("Sending " + castro_username + " flag")
+    # print(send)
+
+    # # Send our flag and recive the response
+    # flagSocket.send(send)
+    # fres = flagSocket.recv(1024)
+    # print(fres)
 
     # Close socket
     flagSocket.close()

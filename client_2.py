@@ -21,5 +21,5 @@ print(flag.decode("utf-8"))
 
 
 # Send the flag and close connection
-send_flag.send(flag, "1")
+send_flag.send(flag, "2")
 serverSocket.close()
