@@ -5,7 +5,7 @@ def send(flag, challenge_number):
     # Team usernames
     fabio_usarname = "fabio.zampiellolutzu"
     roberto_username = ""
-    castro_username = ""
+    castro_username = "castro.dos.santos.jhefferson"
 
     # Create and connect socket to 162.243.73.199:11111 using TCP to send the flag
     flagSocket = socket(AF_INET, SOCK_STREAM)
@@ -38,14 +38,14 @@ def send(flag, challenge_number):
     # Castro flag response
 
     # Creates the response to send
-    # send = castro_username + " " + challenge_number + " " + flag.decode('utf-8')
-    # print("Sending " + castro_username + " flag")
-    # print(send)
+    send = castro_username + " " + challenge_number + " " + flag.decode('utf-8')
+    print("Sending " + castro_username + " flag")
+    print(send)
 
     # # Send our flag and recive the response
-    # flagSocket.send(send)
-    # fres = flagSocket.recv(1024)
-    # print(fres)
+    flagSocket.send(send)
+    fres = flagSocket.recv(1024)
+    print(fres)
 
     # Close socket
     flagSocket.close()
