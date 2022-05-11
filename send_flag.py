@@ -3,49 +3,26 @@ from socket import *
 def send(flag, challenge_number):
 
     # Team usernames
-    fabio_usarname = "fabio.zampiellolutzu"
-    roberto_username = ""
-    castro_username = "castro.dos.santos.jhefferson"
-
-    # Create and connect socket to 162.243.73.199:11111 using TCP to send the flag
-    flagSocket = socket(AF_INET, SOCK_STREAM)
-    flagSocket.connect(("162.243.73.199", 11111))
-
-    # Fabio flag response 
-
-    # Creates the response to send
-    send = fabio_usarname + " " + challenge_number + " " + flag.decode('utf-8')
-    print("Sending " + fabio_usarname + " flag")
-    print(send)
-
-    # Send our flag and recive the response
-    flagSocket.send(send)
-    fres = flagSocket.recv(1024)
-    print(fres)
+    Usernames = ["fabio.zampiellolutzu","robert.ibanez","castro.dos.santos.jhefferson"]
     
-    # Roberto flag response
+    for user in Usernames:
 
-    # Creates the response to send
-    # send = roberto_username + " " + challenge_number + " " + flag.decode('utf-8')
-    # print("Sending " + roberto_username + " flag")
-    # print(send)
+        # Create and connect socket to 162.243.73.199:11111 using TCP to send the flag
+        flagSocket = socket(AF_INET, SOCK_STREAM)
+        flagSocket.connect(("162.243.73.199", 11111))
 
-    # # Send our flag and recive the response
-    # flagSocket.send(send)
-    # fres = flagSocket.recv(1024)
-    # print(fres)
+        # Fabio flag response 
 
-    # Castro flag response
+        # Creates the response to send
+        send = user + " " + challenge_number + " " + flag.decode('utf-8')
+        print("Sending " + user + " flag")
+        print(send)
 
-    # Creates the response to send
-    send = castro_username + " " + challenge_number + " " + flag.decode('utf-8')
-    print("Sending " + castro_username + " flag")
-    print(send)
+        # Send our flag and recive the response
+        flagSocket.send(send)
+        fres = flagSocket.recv(1024)
+        print(fres)
 
-    # # Send our flag and recive the response
-    flagSocket.send(send)
-    fres = flagSocket.recv(1024)
-    print(fres)
-
-    # Close socket
-    flagSocket.close()
+        # Close socket
+        flagSocket.close()
+    
