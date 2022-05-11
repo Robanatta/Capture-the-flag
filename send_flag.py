@@ -19,9 +19,9 @@ def send(flag, challenge_number):
         print(send)
 
         # Send our flag and recive the response
-        flagSocket.send(send)
+        flagSocket.send(send.encode('utf-8'))
         fres = flagSocket.recv(1024)
-        print(fres)
+        print(fres.decode())
 
         # Close socket
         flagSocket.close()
