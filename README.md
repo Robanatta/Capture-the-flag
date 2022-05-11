@@ -24,6 +24,16 @@ Task Distribution:
 
 9 – IPv4 Routing (Castro)
 
-10 – Internet Checksum (First to finish their tasks)
+10 – Internet Checksum (Fabio)
 
-11 - Bonus -> To be decided
+11 - Bonus (Fabio)
+
+# How to run our implementation
+
+You can run each individual client in the shell with
+
+`python client_x.py`
+
+or you can run all of them at once with
+
+`python all_clients.py`
