@@ -11,8 +11,6 @@ def send(flag, challenge_number):
         flagSocket = socket(AF_INET, SOCK_STREAM)
         flagSocket.connect(("162.243.73.199", 11111))
 
-        # Fabio flag response 
-
         # Creates the response to send
         send = user + " " + challenge_number + " " + flag.decode('utf-8')
         print("Sending " + user + " flag")
@@ -25,4 +23,3 @@ def send(flag, challenge_number):
 
         # Close socket
         flagSocket.close()
-    
