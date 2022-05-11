@@ -1,13 +1,13 @@
 print ("Client 1")
 import client_1
 print ("Client 2")
-# import client_2
+import client_2
 print ("Client 3")
 # import client_3
 print ("Client 4")
 import client_4
 print ("Client 5")
-# import client_5
+import client_5
 print ("Client 6")
 # import client_6
 print ("Client 7")
