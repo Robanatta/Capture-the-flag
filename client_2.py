@@ -1,6 +1,5 @@
 # Roberto Ibanez Omar
 
-from http import server
 from socket import *
 import send_flag
 
@@ -15,11 +14,11 @@ serverSocket.connect(("162.243.73.199", 9991))
 # Send the string "helo" to the server
 serverSocket.sendto(bytesToSend, serverAddressPort)
 
-# Recive the flag
+# Recive the flag and close connection
 flag = serverSocket.recv(1024)
 print(flag.decode("utf-8"))
-
-
-# Send the flag and close connection
-send_flag.send(flag, "2")
 serverSocket.close()
+
+# Send the flag
+send_flag.send(flag, "2")
+
