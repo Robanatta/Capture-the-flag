@@ -1,31 +1,26 @@
 # Jhefferson Castro dos santos
 import socket
 import send_flag
-import random
-import time
-
 
 host = '162.243.73.199'
 port = '9992'
 
 #requirements: the TCP responde must have RTT max 2 seconds
-def Main():
-    #using TCP
-    socket1 = socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
-    socket2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
-    socket1.connect((host,port))
-    #extract new random port from data received from the socket1
-    random_port = socket1.recv(1024).decode().rstrip().split(" ")[2]
-    print("random port: ", random_port)
-    socket1.close()
-    socket2.connect((host,int(random_port)))
-    received_data = str(socket2.recv(1024).decode('utf-8'))
-    print(received_data)
-    send_flag.send(received_data,'3')
-    socket2.close()
 
-if __name__ == '__main__':
-    Main()
+#using TCP
+socket1 = socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
+socket2 = socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
+socket1.connect((host,port))
+#extract new random port from data received from the socket1
+random_port = socket1.recv(1024).decode().rstrip().split(" ")[2]
+print("random port: ", random_port)
+socket1.close()
+socket2.connect((host,int(random_port)))
+received_data = str(socket2.recv(1024).decode('utf-8'))
+print(received_data)
+send_flag.send(received_data,'3')
+socket2.close()
+
     
 
 
