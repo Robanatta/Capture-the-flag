@@ -22,7 +22,7 @@ Task Distribution:
 
 8 – IPv4 Subnetting (Roberto)
 
-9 – IPv4 Routing (Castro)
+9 – IPv4 Routing (Castro, Fabio)
 
 10 – Internet Checksum (Fabio)
 
