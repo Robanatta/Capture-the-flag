@@ -45,7 +45,7 @@ if flag == 0:
     socket1.close()
     socket1 = socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
     socket1.connect((host,port))
-    data = str(socket1.recv(1024).decode('utf-8'))
+    # data = str(socket1.recv(1024).decode('utf-8'))
 
 
     socket1.send(value.encode())
