@@ -31,11 +31,8 @@ Task Distribution:
 # How to run our implementation
 
 You can run each individual client in the shell with
-
 `python client_x.py`
-
-where x is the number of the exercise we want to test
+where x is the number of the exercise you want to test
 
 or you can run all of them at once with
-
 `python all_clients.py`
